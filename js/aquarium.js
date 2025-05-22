@@ -1,43 +1,32 @@
-// script.js
-const fishData = [
-  {
-    name: "clownfish",
-    image: "../img/Clown.png",
-  }
+import { Fish } from "../js/fish.js";
+
+const fishTypes = [
+  new Fish(
+    "Clownfish",
+    "../img/Clown.png", "html"
+  ),
+
+  new Fish("Shark", "../img/Shark.png", "html")
 ];
 
-
-
+const activeSpecies = new Set(); // Connaitre les espèces déjà présentent
 function addFish() {
-    const aquarium = document.getElementById("aquarium");
-    const aquariumWidth = aquarium.clientWidth;
-    const aquariumHeight = aquarium.clientHeight;
+  const aquarium = document.getElementById("aquarium");
 
-    
-  const fish = fishData[Math.floor(Math.random() * fishData.length)];
+  // Choisir une espèce disponible (pas déjà dans l'aquarium)
+  const available = fishTypes.filter(f => !activeSpecies.has(f.name));
 
-  const fishEl = document.createElement("div");
-  fishEl.className = "fish";
-  fishEl.style.backgroundImage = `url('${fish.image}')`;
+  if (available.length === 0) {
+    console.log("All species are already in the aquarium.");
+    return;
+  }
 
-  fishEl.style.left = Math.random() * (aquariumWidth - 60) + "px";
-  fishEl.style.top = Math.random() * (aquariumHeight - 40) + "px";
-
-  fishEl.onclick = () => {
-    window.location.href = fish.infoPage;
-  };
-
-  aquarium.appendChild(fishEl);
-
-  const interval = setInterval(() => {
-    fishEl.style.left = Math.random() * (aquariumWidth - 60) + "px";
-    fishEl.style.top = Math.random() * (aquariumHeight - 40) + "px";
-  }, 2000);
-
-
-  setTimeout(() => {
-    clearInterval(interval);
-    fishEl.remove();
-  }, 60000);
+  const selected = available[Math.floor(Math.random() * available.length)];
+  selected.createElement(aquarium);
+  activeSpecies.add(selected.name);
 
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("addFishBtn").addEventListener("click", addFish);
+});
