@@ -17,14 +17,13 @@ body {
     width: 100vw;
     margin: 0rem;
     overflow: hidden;
-
 }
 
 #image-track {
     display: flex;
     gap: 4vmin;
     position: absolute;
-    left: 50%;
+    left: 2%;
     top: 50%;
     transform: translate(0%, -50%);
     user-select: none; /* -- Prevent image highlighting -- */

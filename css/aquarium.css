@@ -1,0 +1,27 @@
+/* style.css */
+body {
+  background-color: #e0f7fa;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#aquarium {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  height: 400px;
+  background: linear-gradient(to bottom, #4fc3f7, #0288d1);
+  border: 5px solid #01579b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fish {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: top 2s, left 2s;
+}
