@@ -6,7 +6,10 @@ const fishTypes = [
     "../img/Clown.png", "https://fishmusic.scot/"
   ),
 
-  new Fish("Shark", "../img/Shark.png", "https://shark-helmets.com/fr_FR/")
+  new Fish(
+    "Shark", 
+    "../img/Shark.png",
+     "https://shark-helmets.com/fr_FR/")
 ];
 
 const activeSpecies = new Set(); // Connaitre les espèces déjà présentent

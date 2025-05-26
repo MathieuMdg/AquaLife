@@ -70,7 +70,7 @@ export class Fish {
     fishEl.style.left = `${this.x}px`;
     fishEl.style.top = `${this.y}px`;
 
-    const facingRight = Math.cos(angle) > 0;
+    const facingRight = Math.cos(Math.PI - angle) > 0;
     fishEl.style.transform = `scaleX(${facingRight ? 1 : -1})`;
 
     // En boucle
