@@ -30,3 +30,9 @@ function addFish() {
 window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("addFishBtn").addEventListener("click", addFish);
 });
+
+
+// Faire apparaitre tous les poissons 
+for (let i = 0; i < fishTypes.length; i++) {
+  addFish();
+}
