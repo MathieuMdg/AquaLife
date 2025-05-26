@@ -86,3 +86,61 @@ body.menu-toggled > .meta-link > span {
     font-family: "Rubik", sans-serif;
     font-weight: 500;
 }
+
+#image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.zoom-content {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 0.3s ease;
+}
+
+.zoom-content img {
+    max-height: 70vh;
+    max-width: 50vw;
+    border-radius: 10px;
+}
+
+.zoom-text {
+    margin-left: 20px;
+    max-width: 30vw;
+    font-family: Arial, sans-serif;
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
