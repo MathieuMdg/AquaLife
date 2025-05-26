@@ -11,9 +11,16 @@ body {
   width: 800px;
   height: 400px;
   background: linear-gradient(to bottom, #4fc3f7, #0288d1);
-  border: 5px solid #01579b;
   border-radius: 10px;
   overflow: hidden;
+}
+
+#aquarium img {
+  position: relative;
+  margin: auto;
+  align-items:baseline;
+  border: 1px solid #01579b;
+  overflow:auto;
 }
 
 .fish {

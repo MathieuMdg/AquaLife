@@ -3,10 +3,10 @@ import { Fish } from "../js/fish.js";
 const fishTypes = [
   new Fish(
     "Clownfish",
-    "../img/Clown.png", "html"
+    "../img/Clown.png", "https://fishmusic.scot/"
   ),
 
-  new Fish("Shark", "../img/Shark.png", "html")
+  new Fish("Shark", "../img/Shark.png", "https://shark-helmets.com/fr_FR/")
 ];
 
 const activeSpecies = new Set(); // Connaitre les espèces déjà présentent
