@@ -48,9 +48,9 @@ function addFish() {
 }
 
 // Pour faire appraitre des poissons en appuyant sur un bouton (nous ne l'utilisons plus actuellement)
-window.addEventListener("DOMContentLoaded", () => {
+/* window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("addFishBtn").addEventListener("click", addFish);
-});
+}); */
 
 
 // Faire apparaitre tous les poissons au chargement de la page

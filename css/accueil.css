@@ -138,8 +138,7 @@ button:hover {
 }
 
 /* === VIDÉOS DE FOND === */
-.background-video,
-.background-youtube {
+.background-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -149,8 +148,7 @@ button:hover {
     overflow: hidden;
 }
 
-.background-video video,
-.background-youtube iframe {
+.background-video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
