@@ -1,4 +1,7 @@
+// Création d'une classe que l'on peut inclure dans d'autres fichier js
 export class Fish {
+
+  // Définition de son constructeur
   constructor(name, image, infoPage) {
     this.name = name;
     this.image = image;
@@ -6,10 +9,14 @@ export class Fish {
     this.x = 0;
     this.y = 0;
     this.angle = 0;
+
   }
+
 
   // Méthodes pour créer un poisson et l'ajouter dans l'aquarium
   createElement(aquarium) {
+
+    // Création d'un "div" pour afficher le poisson
     const fishEl = document.createElement("div");
     fishEl.className = "fish";
     fishEl.style.backgroundImage = `url('${this.image}')`;
@@ -18,16 +25,17 @@ export class Fish {
     const aquariumWidth = aquarium.clientWidth;
     const aquariumHeight = aquarium.clientHeight;
 
-    // Générer la position initiale
+    // Générer la position initiale aléatoire
     this.x = Math.random() * (aquariumWidth - 60);
     this.y = Math.random() * (aquariumHeight - 40);
 
+    // Positionne le poisson à l'écran
     fishEl.style.left = `${this.x}px`;
     fishEl.style.top = `${this.y}px`;
     
-    // Pour que quand l'utilisateur clique sur le poisson ça le redirige sur les informations de celui-ci
+    // Quand l'utilisateur clique sur le poisson ça le redirige sur les informations de celui-ci (une autre page web par exemple)
     fishEl.onclick = () => {
-      window.location.href = this.infoPage;
+      window.open(this.infoPage, '_blank');
     };
 
     // Ajoute le poisson dans l'aquarium
@@ -58,7 +66,7 @@ export class Fish {
       this.x += Math.cos(angle) * speed;
       this.y += Math.sin(angle) * speed;
 
-      // Ne pas toucher les murs
+      // Ne pas toucher les bords
       if (this.x <= 0 || this.x >= aquariumWidth - 60) {
         angle = Math.PI - angle;
         fishEl.style.transform = `scaleX(${Math.cos(angle) > 0 ? 1 : -1})`;
@@ -67,9 +75,11 @@ export class Fish {
         angle = -angle;
       }
 
+    // Positionne le poisson à l'écran
     fishEl.style.left = `${this.x}px`;
     fishEl.style.top = `${this.y}px`;
 
+    // Pour savoir de quel côté orienté le poisson
     const facingRight = Math.cos(Math.PI - angle) > 0;
     fishEl.style.transform = `scaleX(${facingRight ? 1 : -1})`;
 

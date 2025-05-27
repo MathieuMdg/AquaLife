@@ -2,36 +2,100 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/accueil_style.css">
+        <link rel="stylesheet" href="../css/accueil.css">
+        <!-- <link rel="stylesheet" href="../css/style.css"> -->
+        <!-- <link rel="stylesheet" href="../css/accueil_style.css"> -->
+         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Accueil - AquaLife</title>
     </head>
     <body>
 
+        <div class="background-video">
+        <video autoplay muted loop playsinline>
+            <source src="../mp4/Fond.webm" type="video/mp4">
+        </video>
+        </div>
+
         <header>
 
-            <h1 class="titre">Vie Aquatique</h1>
+
+            <h1 class="titre">AquaLife</h1>
             <nav class="container-fluid">
 
-                <a href="accueil.html">Accueil</a>
                 <a href="probleme.html">Problématiques</a>
                 <a href="solutions.html">Solutions</a>
                 <a href="ressources.html">Ressources</a>
-                <a href="apropos.html" role="button">À propos</a>
 
             </nav>
         </header>
+
         <main class="content">
             <section class="text-section">
+
+                <h1>Protéger la vie sous-marine</h1>
+                <h2>Objectif 14 de l'ONU</h2>
+                <p>
+                    Les océans sont bien plus que des étendues d’eau : ils régulent notre climat, produisent plus de la moitié de l’oxygène que nous respirons et abritent une biodiversité extraordinaire. Pourtant, cette richesse est aujourd’hui menacée par la pollution, la surpêche et l’acidification. 
+                </p>
+
+                <h2>Les menaces actuelles</h2>
+
+
+                <ul>
+                    <li><strong>Pollution plastique</strong> : 8 millions de tonnes de déchets plastiques finissent chaque année dans les océans.</li>
+                    <li><strong>Acidification</strong> : L’augmentation du CO₂ rend les eaux plus acides, ce qui détruit les coraux et les écosystèmes fragiles.</li>
+                    <li><strong>Surpêche</strong> : Près de 90 % des stocks de poissons sont pleinement exploités ou surexploités.</li>
+                </ul>
+
+
+                <h2>Que pouvons-nous faire ?</h2>
+                <p>
+                La préservation des océans nécessite des actions concrètes :
+                </p>
+                <ul>
+                <li>Réduction drastique de l’usage du plastique à usage unique.</li>
+                <li>Création d’aires marines protégées.</li>
+                <li>Soutien à la pêche durable et à l’agriculture marine responsable.</li>
+                <li>Sensibilisation à tous les niveaux : écoles, collectivités, citoyens.</li>
+                </ul>
+
+
+                <h2>Un océan de promesses</h2>
+                <p>
+                Protéger la vie sous-marine, c’est défendre la vie tout court. C’est refuser l’indifférence face à la disparition silencieuse d’espèces précieuses. C’est croire que même la plus petite action peut avoir un impact profond. 
+                <br><strong>Nous avons encore le pouvoir d’agir. À nous de faire les bons choix.</strong>
+                </p>
+
+
+
+
                 <h2>Protéger la vie sous-marine</h2>
                 <h3>L’objectif 14 de l’ONU</h3>
                 <p>Les océans couvrent plus de 70 % de la surface de la planète et sont essentiels à la vie. Pourtant, ils sont menacés par la pollution, la surpêche et le changement climatique. Ce site a pour but de sensibiliser, informer et mobiliser autour de la préservation de la vie aquatique.</p>
             </section>
+
+
+            <section class="aquarium-section">
+
+                <script type="module" src="../js/aquarium.js"></script>
+                <link rel="stylesheet" href="../css/aquarium.css" />
+
+                <h2>Bienvenue dans notre monde aquatique !</h2>
+                <p>Clique sur un poisson pour avoir ses informations.</p> </br>
+
+                <div id="aquarium">
+                    <img src="../gif/Aquarium.gif" id="aquarium">
+                </div>
+
+            </section>
+
+
             <section class="image-section">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Océan" />
+                <!-- <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Océan" /> -->
             </section>
         </main>
+
 
 
 
