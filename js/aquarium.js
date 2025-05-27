@@ -11,7 +11,13 @@ const fishTypes = [
   new Fish(
     "Shark", 
     "../img/Shark.png",
-     "https://shark-helmets.com/fr_FR/")
+     "https://shark-helmets.com/fr_FR/"),
+
+  new Fish(
+    "Thon rouge",
+    "../img/ThonRouge.png",
+    "html"
+  )
 ];
 
 // Tableau contenant les espèces déjà présentent dans l'aquarium
