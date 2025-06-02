@@ -84,24 +84,32 @@
 
 
             <!-- Section contenant les images avec les informations sur les poissons en danger -->
-            <section id="carousel-container">
-
+            <section id="carousel-container" aria-label="Fiches d'information sur les poissons">
                 <h1>Fiches des Fishs</h1>
-                <div id="carousel">
-                    <div class="slide" data-fish="Clownfish">
+
+                <div id="carousel" class="carousel">
+                    <!-- Poisson clown -->
+                    <article class="slide" data-fish="Clownfish">
                         <img src="../img/Clown.png" alt="Poisson clown" draggable="false">
-                        <p>Poisson clown, vit dans les récifs coralliens.</p>
-                    </div>
-                    <div class="slide" data-fish="Shark">
+                        <h2>Poisson clown</h2>
+                        <p>Vit dans les récifs coralliens, souvent en symbiose avec les anémones. Quasi menacé à cause de la destruction des coraux.</p>
+                    </article>
+
+                    <!-- Requin -->
+                    <article class="slide" data-fish="Shark">
                         <img src="../img/Shark.png" alt="Requin" draggable="false">
-                        <p>Requin, victime de la surpêche.</p>
-                    </div>
-                    <div class="slide" data-fish="Thon rouge">
+                        <h2>Requin</h2>
+                        <p>Victime de la surpêche et du commerce des ailerons. Espèce clé dans les écosystèmes marins.</p>
+                    </article>
+
+                    <!-- Thon rouge -->
+                    <article class="slide" data-fish="Thon rouge">
                         <img src="../img/ThonRouge.png" alt="Thon rouge" draggable="false">
-                        <p>Thon rouge, menacé d’extinction.</p>
-                    </div>
-                    </div>
-                </section>
+                        <h2>Thon rouge</h2>
+                        <p>En danger critique d’extinction. La surpêche industrielle menace l'équilibre de la chaîne alimentaire marine.</p>
+                    </article>
+                </div>
+            </section>
 
         </main>
 
