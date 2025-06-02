@@ -147,3 +147,60 @@ button:hover {
 .text-section p {
     margin: 1rem 0;
 }
+
+
+#carousel-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px cyan;
+  position: relative;
+}
+
+#carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+}
+
+.slide img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.5);
+}
+
+/* Boutons de navigation */
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+  background-color: rgba(0, 255, 255, 0.6);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-buttons button:hover {
+  background-color: rgba(0, 255, 255, 0.9);
+}

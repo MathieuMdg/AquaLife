@@ -1,3 +1,6 @@
+import { scrollToFishInCarousel } from './aquarium.js';
+
+
 // Création d'une classe que l'on peut inclure dans d'autres fichier js
 export class Fish {
 
@@ -33,10 +36,17 @@ export class Fish {
     fishEl.style.left = `${this.x}px`;
     fishEl.style.top = `${this.y}px`;
     
+    /*
     // Quand l'utilisateur clique sur le poisson ça le redirige sur les informations de celui-ci (une autre page web par exemple)
     fishEl.onclick = () => {
       window.open(this.infoPage, '_blank');
     };
+    */
+
+     // ⚡ Lorsqu'on clique, on va au carrousel sur la slide correspondante
+    fishEl.addEventListener("click", () => {
+      scrollToFishInCarousel(this.name);
+    });
 
     // Ajoute le poisson dans l'aquarium
     aquarium.appendChild(fishEl);

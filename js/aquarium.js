@@ -1,4 +1,3 @@
-// Importer la classe Fish du fichier fish.js
 import { Fish } from "../js/fish.js";
 
 // Déclaration d'un tableau avec tous les poissons
@@ -53,13 +52,33 @@ function addFish() {
 
 }
 
-// Pour faire appraitre des poissons en appuyant sur un bouton (nous ne l'utilisons plus actuellement)
-/* window.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("addFishBtn").addEventListener("click", addFish);
-}); */
 
 
 // Faire apparaitre tous les poissons au chargement de la page
 for (let i = 0; i < fishTypes.length; i++) {
   addFish();
+}
+
+
+  const carousel = document.getElementById('carousel');
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  export function scrollToFishInCarousel(fishName) {
+  const index = Array.from(slides).findIndex(slide =>
+    slide.dataset.fish === fishName
+  );
+
+  if (index !== -1) {
+    currentIndex = index;
+    updateCarousel();
+  } else {
+    console.warn(`Aucune slide trouvée pour le poisson : ${fishName}`);
+  }
 }
