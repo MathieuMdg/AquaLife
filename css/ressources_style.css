@@ -1,9 +1,94 @@
-html, body {
+body {
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    height: 100%;
+    justify-content: space-between;
+    background-size: cover;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
 }
+
+h1, h2, h3, p, a {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+main {
+    width: 70%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(0, 51, 102, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* === BOUTONS === */
+button, .nav-link {
+    background: linear-gradient(to right, #00c2cb, #0088aa);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 1.2rem;
+    box-shadow: 0 0 10px rgba(0,255,255,0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #00dbe0;
+    box-shadow: 0 0 15px rgba(0,255,255,0.6);
+}
+
+/* === CONTENU CENTRÉ === */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.background-gradient {
+    background: linear-gradient(90deg, #005577, #00c2cb);
+}
+
+
+/* Section de texte principal */
+.text-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f0f8ff;
+    background-color: rgba(0, 51, 102, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Pour les titres */
+.text-section h1, .text-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+.text-section h3 {
+    font-size: 1.4rem;
+}
+
+/* Pour les listes */
+.text-section ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+/* Pour les paragraphes */
+.text-section p {
+    margin: 1rem 0;
+}
+
 
 
