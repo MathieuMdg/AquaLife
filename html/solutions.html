@@ -1,59 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/probleme_style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../js/solutions.js"></script>
-  <title>À propos - AquaLife</title>
-</head>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/carousel.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="../js/solutions.js"></script>
+      <title>À propos - AquaLife</title>
+    </head>
 
-<body>
+    <body>
 
-<header>
+    <header>
 
-  <h1 class="titre">Vie Aquatique</h1>
-  <nav class="container-fluid">
+      <h1 class="titre">Vie Aquatique</h1>
+      <nav class="container-fluid">
 
-    <a href="accueil.html">Accueil</a>
-    <a href="probleme.html">Problématiques</a>
-    <a href="ressources.html">Ressources</a>
+        <a href="accueil.html">Accueil</a>
+        <a href="probleme.html">Problématiques</a>
+        <a href="ressources.html">Ressources</a>
+
+      </nav>
+
+    </header>
 
 
-  </nav>
-</header>
-<!-- C'est le carrousel qui tourne avec les images-->
-<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-  <img class="image" src="../img/1_Collecte_dechet.jpg" draggable="false" alt="1_Collecte_dechet"/>
-  <img class="image" src="../img/2_Quotas_Peche.jpg" draggable="false" alt="2_Quotas_Peche"/>
-  <img class="image" src="../img/3_herbiers_marins.webp" draggable="false" alt="3_herbiers_marins"/>
-  <img class="image" src="../img/4_solutions_nettoyage.jpg" draggable="false" alt="4_solutions_nettoyage"/>
-  <img class="image" src="../img/5_restauration_corail.jpg" draggable="false" alt="5_restauration_corail"/>
-  <img class="image" src="../img/6_dragon_mer.jpg" draggable="false" alt="6_dragon_mer"/>
-  <img class="image" src="../img/7_nuisance_sonore.jpg" draggable="false" alt="7_nuisance_sonore"/>
-  <img class="image" src="../img/8_iceberg_fondant.jpg" draggable="false" alt="8_iceberg_fondant"/>
-  <img class="image" src="../img/9_station_epuration.jpg" draggable="false" alt="9_station_epuration"/>
-</div>
+    <!-- Pour le défilement des images -->
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
 
-<div id="image-overlay">
-  <div class="zoom-content">
-    <div class="zoom-text">
-      <p id="zoomed-text">Texte descriptif de l'image</p>
-    </div>
-  </div>
-  <span id="close-btn">&times;</span>
-</div>
-<footer>
-  <div class="content">
-    <div>
-      &copy; Mathieu MENDOUGA, Noah GUICHARD, Gabriel GENIEZ - 2025
+      <img class="image" src="../img/1_Collecte_dechet.jpg" draggable="false" alt="1_Collecte_dechet"/>
+      <img class="image" src="../img/2_Quotas_Peche.jpg" draggable="false" alt="2_Quotas_Peche"/>
+      <img class="image" src="../img/3_herbiers_marins.webp" draggable="false" alt="3_herbiers_marins"/>
+      <img class="image" src="../img/4_solutions_nettoyage.jpg" draggable="false" alt="4_solutions_nettoyage"/>
+      <img class="image" src="../img/5_restauration_corail.jpg" draggable="false" alt="5_restauration_corail"/>
+      <img class="image" src="../img/6_dragon_mer.jpg" draggable="false" alt="6_dragon_mer"/>
+      <img class="image" src="../img/7_nuisance_sonore.jpg" draggable="false" alt="7_nuisance_sonore"/>
+      <img class="image" src="../img/8_iceberg_fondant.jpg" draggable="false" alt="8_iceberg_fondant"/>
+      <img class="image" src="../img/9_station_epuration.jpg" draggable="false" alt="9_station_epuration"/>
+      
     </div>
 
-    <a class="lienfooter" href="apropos.html">A propos</a>
-  </div>
+    <div id="image-overlay">
+      <div class="zoom-content">
+         <img id="zoomed-image" src="none" alt="Zoomed Image" />
+        <div class="zoom-text">
+          <p id="zoomed-text">Texte descriptif de l'image</p>
+        </div>
+      </div>
+      <span id="close-btn">&times;</span>
+    </div>
+    <footer>
+      <div class="content">
+        <div>
+          &copy; Mathieu MENDOUGA, Noah GUICHARD, Gabriel GENIEZ - 2025
+        </div>
 
-</footer>
+        <a class="lienfooter" href="apropos.html">A propos</a>
+      </div>
 
-</body>
-</html>
+    </footer>
+
+    </body>
+  </html>
