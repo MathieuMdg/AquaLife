@@ -37,29 +37,26 @@ main {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
-    text-align: left; /* passage essentiel */
+    text-align: left;
     font-size: 1.1rem;
     line-height: 1.8;
     color: #f0f8ff;
-    background-color: rgba(0, 51, 102, 0.4); /* légèrement foncé pour lecture fluide */
+    background-color: rgba(0, 51, 102, 0.4);
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Pour les titres */
 .text-section h1, .text-section h2 {
     text-align: center;
     margin-bottom: 1rem;
     color: #ffffff;
 }
 
-/* Pour les listes */
 .text-section ul {
     margin: 1rem 0;
     padding-left: 2rem;
 }
 
-/* Pour les paragraphes */
 .text-section p {
     margin: 1rem 0;
 }
