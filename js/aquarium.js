@@ -4,18 +4,16 @@ import { Fish } from "../js/fish.js";
 const fishTypes = [
   new Fish(
     "Clownfish",
-    "../img/Clown.png", "https://fishmusic.scot/"
+    "../img/Clown.png"
   ),
 
   new Fish(
     "Shark", 
-    "../img/Shark.png",
-     "https://shark-helmets.com/fr_FR/"),
+    "../img/Shark.png"),
 
   new Fish(
     "Thon rouge",
-    "../img/ThonRouge.png",
-    "html"
+    "../img/ThonRouge.png"
   )
 ];
 
