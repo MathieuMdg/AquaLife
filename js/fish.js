@@ -4,7 +4,7 @@ import { scrollToFishInCarousel } from './aquarium.js';
 // Création d'une classe que l'on peut inclure dans d'autres fichier js
 export class Fish {
 
-  // Définition de son constructeur
+  // Constructeur
   constructor(name, image, infoPage) {
     this.name = name;
     this.image = image;
@@ -19,64 +19,45 @@ export class Fish {
   // Méthodes pour créer un poisson et l'ajouter dans l'aquarium
   createElement(aquarium) {
 
-    // Création d'un "div" pour afficher le poisson
     const fishEl = document.createElement("div");
     fishEl.className = "fish";
     fishEl.style.backgroundImage = `url('${this.image}')`;
 
-    // Récuperer les dimensions de l'aquarium
     const aquariumWidth = aquarium.clientWidth;
     const aquariumHeight = aquarium.clientHeight;
 
-    // Générer la position initiale aléatoire
     this.x = Math.random() * (aquariumWidth - 60);
     this.y = Math.random() * (aquariumHeight - 40);
 
-    // Positionne le poisson à l'écran
     fishEl.style.left = `${this.x}px`;
     fishEl.style.top = `${this.y}px`;
-    
-    /*
-    // Quand l'utilisateur clique sur le poisson ça le redirige sur les informations de celui-ci (une autre page web par exemple)
-    fishEl.onclick = () => {
-      window.open(this.infoPage, '_blank');
-    };
-    */
 
-     // ⚡ Lorsqu'on clique, on va au carrousel sur la slide correspondante
     fishEl.addEventListener("click", () => {
       scrollToFishInCarousel(this.name);
     });
 
-    // Ajoute le poisson dans l'aquarium
     aquarium.appendChild(fishEl);
 
-    // Initialiser le déplacement du poisson
     this.startSwimming(fishEl, aquarium);
 
     return fishEl;
   }
 
 
-  // Fonction qui s'occupe du déplacement du poisson
+  // Méthode qui s'occupe du déplacement du poisson
   startSwimming(fishEl, aquarium) {
 
-    // Récupérer les dimensions de l'aquarium
     const aquariumWidth = aquarium.clientWidth;
     const aquariumHeight = aquarium.clientHeight;
 
-
-    // Position, angle et vitesse aléatoire
     let angle = Math.random() * 2 * Math.PI;
     let speed = 1 + Math.random();
 
     const updatePosition = () => {
       
-      // Changer la position
       this.x += Math.cos(angle) * speed;
       this.y += Math.sin(angle) * speed;
 
-      // Ne pas toucher les bords
       if (this.x <= 0 || this.x >= aquariumWidth - 60) {
         angle = Math.PI - angle;
         fishEl.style.transform = `scaleX(${Math.cos(angle) > 0 ? 1 : -1})`;
@@ -85,15 +66,13 @@ export class Fish {
         angle = -angle;
       }
 
-    // Positionne le poisson à l'écran
     fishEl.style.left = `${this.x}px`;
     fishEl.style.top = `${this.y}px`;
 
-    // Pour savoir de quel côté orienté le poisson
     const facingRight = Math.cos(Math.PI - angle) > 0;
     fishEl.style.transform = `scaleX(${facingRight ? 1 : -1})`;
 
-    // En boucle
+    // On répète
     this.animationFrame = requestAnimationFrame(updatePosition);
   };
 
