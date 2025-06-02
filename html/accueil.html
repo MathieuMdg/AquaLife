@@ -4,17 +4,13 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/accueil.css">
         <link rel="stylesheet" href="../css/style.css">
-         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+        <script type="module" src="../js/aquarium.js"></script>
+        <link rel="stylesheet" href="../css/aquarium.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Accueil - AquaLife</title>
     </head>
     <body>
-
-        <div class="background-video">
-        <video autoplay muted loop playsinline>
-            <!-- <source src="../mp4/Fond.webm" type="video/mp4"> -->
-        </video>
-        </div>
 
         <header>
 
@@ -77,14 +73,11 @@
 
             <section class="aquarium-section">
 
-                <script type="module" src="../js/aquarium.js"></script>
-                <link rel="stylesheet" href="../css/aquarium.css" />
-
                 <h2>Bienvenue dans notre monde aquatique !</h2>
-                <p>Clique sur un poisson pour avoir ses informations.</p> </br>
+                <p>Clique sur un poisson pour avoir ses informations.</p>
 
                 <div id="aquarium">
-                    <img src="../gif/Aquarium.gif" id="aquarium" draggable="false">
+                    <img src="../gif/Aquarium.gif" class="aquarium-image" draggable="false" alt="Aquarium">
                 </div>
 
             </section>
@@ -92,17 +85,19 @@
 
             <!-- Section contenant les images avec les informations sur les poissons en danger -->
             <section id="carousel-container">
+
+                <h1>Fiches des Fishs</h1>
                 <div id="carousel">
                     <div class="slide" data-fish="Clownfish">
-                        <img src="../img/Clown.png" alt="Poisson clown">
+                        <img src="../img/Clown.png" alt="Poisson clown" draggable="false">
                         <p>Poisson clown, vit dans les récifs coralliens.</p>
                     </div>
                     <div class="slide" data-fish="Shark">
-                        <img src="../img/Shark.png" alt="Requin">
+                        <img src="../img/Shark.png" alt="Requin" draggable="false">
                         <p>Requin, victime de la surpêche.</p>
                     </div>
                     <div class="slide" data-fish="Thon rouge">
-                        <img src="../img/ThonRouge.png" alt="Thon rouge">
+                        <img src="../img/ThonRouge.png" alt="Thon rouge" draggable="false">
                         <p>Thon rouge, menacé d’extinction.</p>
                     </div>
                     </div>
