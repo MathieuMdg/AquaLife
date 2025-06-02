@@ -1,9 +1,65 @@
-html, body {
+body {
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    height: 100%;
+    justify-content: space-between;
+    background-size: cover;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+h1, h2, h3, p, a {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
 
+main {
+    width: 70%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(0, 51, 102, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left; /* passage essentiel */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f0f8ff;
+    background-color: rgba(0, 51, 102, 0.4); /* légèrement foncé pour lecture fluide */
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Pour les titres */
+.text-section h1, .text-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+/* Pour les listes */
+.text-section ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+/* Pour les paragraphes */
+.text-section p {
+    margin: 1rem 0;
+}
